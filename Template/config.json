@@ -19,12 +19,12 @@ var navigation=[
   {
       "page":"folder1.html",
       "title":"FOLD1",
-      "boxId":"0"
+      "boxId":"94317563334"
   },
   {
       "page":"folder2.html",
       "title":"FOLD2",
-      "boxId":"0"
+      "boxId":"94317566934"
   },
   {
       "page":"folder3.html",
@@ -34,17 +34,17 @@ var navigation=[
   {
       "page":"preview1.html",
       "title":"PREV1",
-      "boxId":"428392560865"
+      "boxId":"563605928934"
   },
   {
       "page":"preview2.html",
       "title":"PREV2",
-      "boxId":"0"
+      "boxId":"563605926534"
   },
   {
       "page":"preview3.html",
       "title":"PREV3",
-      "boxId":"0"
+      "boxId":"563605925334"
   },
   {
       "page":"preview4.html",
@@ -78,7 +78,7 @@ var navigation=[
   {
         "page":"map_folder.html",
         "title":"MAP",
-        "boxId":"81642016647",
+        "boxId":"563605925334",
         "latitude":51.533772570045016,
         "longitude":-0.09330533022541276,
         "zoomLevel":10
