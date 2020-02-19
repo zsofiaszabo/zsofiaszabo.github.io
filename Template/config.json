@@ -1,88 +1,12 @@
-//Client ID
-var clientId="bn2iyg37p78jkowrp0io0nc2ln0be3wt";
-
-//Main page
-var redirectAfterLoginPage="/Template/main.html";
-
-//Navigation
-var navigation=[
-
-  {
-      "page":"readme.html",
-      "title":"README"
-  },
-  {
-      "page":"https://developer.box.com",
-      "title":"DEVELOPER",
-      "boxId":"0"
-  },
-  {
-      "page":"folder1.html",
-      "title":"FOLD1",
-      "boxId":"0"
-  },
-  {
-      "page":"folder2.html",
-      "title":"FOLD2",
-      "boxId":"0"
-  },
-  {
-      "page":"folder3.html",
-      "title":"FOLD3",
-      "boxId":"0"
-  },
-  {
-      "page":"preview1.html",
-      "title":"PREV1",
-      "boxId":"428392560865"
-  },
-  {
-      "page":"preview2.html",
-      "title":"PREV2",
-      "boxId":"0"
-  },
-  {
-      "page":"preview3.html",
-      "title":"PREV3",
-      "boxId":"0"
-  },
-  {
-      "page":"preview4.html",
-      "title":"PREV4",
-      "boxId":"0"
-  },
-  {
-      "page":"openwith.html",
-      "title":"OPENWITH",
-      "boxId":"0"
-  },
-  {
-    "page":"move.html",
-    "title":"MOVE",
-    "boxId":"0",
-    "boxId2":"0",
-  },
-  {
-      "page":"uploader.html",
-      "title":"UPLOADER",
-      "boxId":"0"
-  },
-  {
-      "page":"metadataform.html",
-      "title":"FORM",
-      "boxId":"92328338950",
-      "templateKey":"invoiceStrucutured",
-      "eid":"47757585"
-  },
-
-  {
-        "page":"map_folder.html",
-        "title":"MAP",
-        "boxId":"81642016647",
-        "latitude":51.533772570045016,
-        "longitude":-0.09330533022541276,
-        "zoomLevel":10
+{
+  "boxAppSettings": {
+    "clientID": "qaz0txgiemvochvkffvc1h3mcemkrqs2",
+    "clientSecret": "PzpH6BZNbnJlltmyrSqnuPZ64DkACNuu",
+    "appAuth": {
+      "publicKeyID": "witm9yt1",
+      "privateKey": "-----BEGIN ENCRYPTED PRIVATE KEY-----\nMIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDgQIqAC9JlpAwlkCAggA\nMBQGCCqGSIb3DQMHBAhm/BrsuWLu3QSCBMim/uPO5gKfPopBSppCzjXmtVaUC/lT\nypBxOsk8TF+7b9za0DT6JAOmDw+niKPml/ok6E/dDUVWMlwm301rxZPcUV0yTfg8\nbN10d80uu8Psgmj59ewSR3gBhC2Plm26rQlPHe14tGRBO8+/ds2lNOMBXVi6t7KP\n/RfXdqNzGQ8L5ir2tWQ9Z1K62sEDtNu+exjf9uO+nvK3cqUYNfXE81F1+gqx4XkJ\nyXAoe3DPC3N26F9IMkN628EbVxjfh1GGaoRiYnNHr/ekAF/bFbBBYSGZ+tdrPaTi\nyu69vAFcATVBK8o5MYi34hv9pZEaiyATs3s4nquybptTAc5LH1xExAS6h7lCfD5a\nvWUYnRVcs3TDxG9I69BnQBE0ZNhdw5JGg30er46rNDlJnOJ6vI3KOPnriwGtb2Wx\npDlckl6gOL+V9v22JIfDuTDZg0h2/s8JYtcJDabCsEoRnjY1MTNyHoIKsb4hURTL\nlgmyfHqp8kCisz2cqC/XozQVPPoA1RoSfsg9+DDhYpMQFA5XFXkxIxE+Up69YbA0\ne/SNN6koAOurIXhYHmnmRKnZNfmp2kxFgn9+y+E/pdc0s3WnsEvfGAiYnkBf2E8i\nxeGjs0UwiMm0y8gRmCb0MKBdiO4tFXSYbu+DF4wzJtov1NuASstGg9jSogXXJLke\nQgO7kvoCVEHKIGYV82VuJQV55KBQKWgxH+88m3t1W1cGqKtgegYq4+hyhPb/sxuk\nAA9x6GEbBCFFN5/B1L1FQezsAoSmOV0O2uYvSgvHHaDpBEnTvkCDYn4a7eiF/XKm\nVsvq2i2lXKURbMMlq1BF3JyXr2yWvixA4tF1CgSm/hi2ne5fE6dO5Y6Tffl4FrBo\nEeu7YVUfaGtjCM9DULGj1iyK6G1TRg3NOUQoDe9dPEwd2PvlequXSMpiit4LxiJ4\nDPbuufGMDs5waQJ1Kgz5SSkN6r78DeSqks7rlKKneqlLhefft5iSi1SxhF2a0I/c\n48bOOAUqHmCw4J2RxiNZ/1Nzr3vGSerfXU71aUE6sqy9jL+wrznPGG+c0HC8Fu7F\nUrMpcLGcbA+ERu/+J+ut3SqK16vWDY7fHUdTMzVlz0Nxkij8KeiS9krC9guKQ15Y\nVtw0kvj8wY/NtYLY2csulEO8zBbXX4XSuqPCd7lQwPfuFHpbdKl7Erig2h+MMWkN\nmaGpglNwz+kdF13rskXQX8nJVp/1jarZTCGAOoa4i1y91jcRkBmJMoG6t0jDSYDJ\nqhHlhW/OcjrKYdR6/NSw2KLSA4V/lkMrtFiS/tWPPkDVvwMEICtZk2II9mtpShZj\nfz7qB1xFXehLteeJQ5Emk2jRCdaD+F0YgxVuuPqT6r5ippwOBlv9b+X/kYqqvsWI\nkwS2/23BGBjNRYUFXoRsDxIvWlBEFzOOEjToHL8o4zPS0QERVF2Maaxpm57zEciw\n7wgdSlcdWAK1FEBm4t75UoIaTemwiVHH4MS3cUw2p3z/D2WFRTYpcD8wrMS3C69p\nH5WyYqt+25fU+pqBK7aBy4meF1EHsi7gK2gN0LV+GUxoOdRBwUlnAxX3LAFZpzCB\n0/XQb24+WHCzgTM1tYC8VFf8CNeHtR9ppBYCQZHxsgM0kf2zFVCwDVGu8uDHFja6\nes0=\n-----END ENCRYPTED PRIVATE KEY-----\n",
+      "passphrase": "6ccc9ec4bb121044a81433421942b901"
     }
-
-
-];
+  },
+  "enterpriseID": "194928626"
+}
