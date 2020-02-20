@@ -33,17 +33,17 @@ var navigation=[
   },*/
   {
       "page":"preview1.html",
-      "title":"Preview Example 1",
+      "title":"PREVIEW 1",
       "boxId":"563605928934"
   },
   {
       "page":"preview2.html",
-      "title":"Preview Example 2",
+      "title":"PREVIEW 2",
       "boxId":"563605926534"
   },
   {
       "page":"preview3.html",
-      "title":"Preview Example 3",
+      "title":"PREVIEW 3",
       "boxId":"563605925334"
   }/*,
   {
