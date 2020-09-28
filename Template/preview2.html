@@ -26,27 +26,25 @@
         var preview = new Box.Preview();
         getAccessToken().then(function(result) {
           preview.show(boxId, result, {
-            container: '.preview-container',
-            logoUrl: 'logo-small.png',
-            header: 'dark',
-            showDownload:true,
-            showAnnotations:true,
-            viewers :{
-                Document :{
-                  annotations: {
-                    enabled:true,
-                    enabledTypes: [
-                    "highlight comment",
-                    "highlight_comment",
-                    "highlight-comment",
-                    "highlight",
-                    "highlight_only",
-                    "draw",
-                    "point"
-                ]
-                  }
+          container: '.preview-container',
+          showDownload: true,
+          showAnnotations: true,
+          viewers: {
+              Document: {
+                    annotations: {
+                        enabled: true,
+                        enabledTypes: [
+                            // "highlight comment",
+                            // "highlight_comment",
+                            // "highlight-comment",
+                            // "highlight",
+                            // "highlight_only",
+                            "draw",
+                            "point"
+                        ]
+                    }
                 }
-              }
+            }
         });
       })
     </script>
