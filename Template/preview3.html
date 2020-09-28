@@ -26,22 +26,12 @@
       getAccessToken().then(function(result) {
         preview.show(boxId, result, {
           container: '.preview-container',
-          contentSidebarProps: {
-            detailsSidebarProps: {
-              hasNotices: true,
-              hasProperties: true,
-              hasAccessStats: true,
-              hasVersions: true
-            },
-            hasActivityFeed: true,
-            hasSkills: true,
-            hasMetadata: true
-          },
-          showAnnotations:'true',
+            showDownload:true,
+            showAnnotations:true,
             viewers :{
                 Document :{
                   annotations: {
-                    enabled:'true',
+                    enabled:true,
                     enabledTypes: [
                     "highlight comment",
                     "highlight_comment",
@@ -54,9 +44,6 @@
                   }
                 }
               }
-
-          hasHeader: true,
-        });
       });
     </script>
   </body>
