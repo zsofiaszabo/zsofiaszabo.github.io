@@ -39,12 +39,12 @@ var navigation=[
   {
       "page":"preview2.html",
       "title":"PREVIEW 2",
-      "boxId":"563605926534"
+      "boxId":"677845255491"
   },
   {
       "page":"preview3.html",
       "title":"PREVIEW 3",
-      "boxId":"677845255491"
+      "boxId":"563605925334"
   }/*,
   {
       "page":"preview4.html",
