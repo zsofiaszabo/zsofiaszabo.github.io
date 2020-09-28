@@ -37,6 +37,24 @@
             hasSkills: true,
             hasMetadata: true
           },
+          showAnnotations:'true',
+            viewers :{
+                Document :{
+                  annotations: {
+                    enabled:'true',
+                    enabledTypes: [
+                    "highlight comment",
+                    "highlight_comment",
+                    "highlight-comment",
+                    "highlight",
+                    "highlight_only",
+                    "draw",
+                    "point"
+                ]
+                  }
+                }
+              }
+
           hasHeader: true,
         });
       });
