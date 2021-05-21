@@ -1,0 +1,59 @@
+<html>
+<body>
+<table align ="center">
+    <tr>
+      <th>Select your Organisational function</th>
+  </tr>
+  <tr>
+    <td align = "center">     
+      <button>
+      <a id="cust" type="button" 
+      href="https://google.com">
+      Europe (OneLogin)
+      </a>
+      </button>
+    </td>
+  </tr> 
+  <tr>
+    <td align = "center">     
+      <button>
+      <a id="cust" type="button" 
+      href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=#target_resource#">
+      North America (Okta)
+      </a>
+      </button>
+    </td>
+  </tr> 
+</table>  
+
+<script type="text/javascript">
+        function getUrlVars() {
+                    var vars = {};
+                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+                    function(m,key,value) {
+                     vars[key] = value;
+                    });
+                    return vars;
+        }
+
+        function addTargetResource(obj,tr)
+        {
+                    obj.href = obj.href+tr;
+        }
+
+        function SetTargetResource()
+        {         
+                    var tr = "#target_resource#";
+                    if (getUrlVars()["TargetResource"])
+                    {
+                                tr = getUrlVars()["TargetResource"];
+                    }
+
+                    var cust = document.getElementById("cust");
+                    addTargetResource(cust, tr);
+        }
+        window.onload = SetTargetResource;
+    </script>
+
+</body>
+</html>
