@@ -1,70 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SSO Box</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    <link href="./assets/css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="branding">
-          <img height="70" src="./assets/img/box-logo.svg" alt="box">
-          <h1>Please select your organizational function below to log into Box</h1>
-        </div>
-      </div>
-    </div>
+<html>
+<body>
 
-    <div class="container main-content">
-      <div class="row">
-        <div class="column">
-          <div class="shape shape-bottom shape-fluid-x svg-shim text-white">
-            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path></svg>
-          </div>
-          <div class="column-body">
-          </div>
-          <a class="btn" id="cust" href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
-            Click here
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 1024 1024"><path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z" stroke="inherit"></path></svg>
-          </a>
-        </div>
-
-    <script type="text/javascript">
-      function getUrlVars() {
-        var vars = {};
-        var parts = window.location.href.replace(
-          /[?&]+([^=&]+)=([^&]*)/gi,
-          function(m,key,value) {
-            vars[key] = value;
-          }
-        );
-        return vars;
-      }
+<table align ="center" border="0">
+  <tr center width="1000">
+    <td align = "center"><br><br>VÄLJ MELLAN ALTERNATIV NEDAN FÖR ATT KOMMA IN I BOX<br><br>CHOOSE BETWEEN OPTIONS BELOW TO GET INTO BOX<br><br><br></td>
+</table>
+<table width="1000" align="center">
+    <td align = "center">     
+      <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
+      <img src="pictures/Bild-01.png" width="300" height="400">
+      </a>
+    </td>
+  <td width="50"></td>
+    <td align = "center">     
+      <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Faav0359.my.idaptive.app%2F0ccbcd24-417f-4e7d-91d3-67c1acb8da8c&TargetResource=">
+      <img src="pictures/Bild-02.png" width="300" height="400">
+      </a>
+    </td>
+  </td>
+  </tr> 
+</table>  
 
 
-      function addTR(obj,tr) {
-        obj.href = obj.href+tr;
-      }
-
-
-      function SetTR(elementID) {
-        var tr = "#target_resource#";
-
-        if (getUrlVars()["TargetResource"]) {
-          tr = getUrlVars()["TargetResource"];
+<script type="text/javascript">
+        function getUrlVars() {
+                    var vars = {};
+                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+                    function(m,key,value) {
+                     vars[key] = value;
+                    });
+                    return vars;
         }
 
-        var element = document.getElementById(elementID);
-        addTR(element, tr);
-      }
+        function addTargetResource(obj,tr)
+        {
+                    obj.href = obj.href+tr;
+        }
 
-      // Must give each <a> an id
-      // Each link must be given the TargetResource value
-      window.onload = SetTR("cust");
-    </script>
+        function SetTargetResource()
+        {         
+                    var tr = "#target_resource#";
+                    if (getUrlVars()["TargetResource"])
+                    {
+                                tr = getUrlVars()["TargetResource"];
+                    }
 
-  </body>
+                    var cust = document.getElementById("cust");
+                    addTargetResource(cust, tr);
+        }
+        window.onload = SetTargetResource;
+</script>
+</body>
 </html>
