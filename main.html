@@ -2,24 +2,24 @@
 <body>
 
 <table align ="center" border="0">
-  <tr center width="1000">
-    <td align = "center"><br><br>VÄLJ MELLAN ALTERNATIV NEDAN FÖR ATT KOMMA IN I BOX<br><br>CHOOSE BETWEEN OPTIONS BELOW TO GET INTO BOX<br><br><br></td>
+    <tr center width="1000">
+        <td align = "center"><br><br>VÄLJ MELLAN ALTERNATIV NEDAN FÖR ATT KOMMA IN I BOX<br><br>CHOOSE BETWEEN OPTIONS BELOW TO GET INTO BOX<br><br><br></td>
 </table>
 <table width="1000" align="center">
-    <td align = "center">     
-      <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
-      <img src="pictures/Bild-01.png" width="300" height="400">
-      </a>
+        <td align = "center">           
+            <a id="azure" href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
+            <img src="pictures/Bild-01.png" width="300" height="400">
+            </a>
+        </td>
+    <td width="50"></td>
+        <td align = "center">           
+            <a id="idaptive" href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Faav0359.my.idaptive.app%2F0ccbcd24-417f-4e7d-91d3-67c1acb8da8c&TargetResource=">
+            <img src="pictures/Bild-02.png" width="300" height="400">
+            </a>
+        </td>
     </td>
-  <td width="50"></td>
-    <td align = "center">     
-      <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Faav0359.my.idaptive.app%2F0ccbcd24-417f-4e7d-91d3-67c1acb8da8c&TargetResource=">
-      <img src="pictures/Bild-02.png" width="300" height="400">
-      </a>
-    </td>
-  </td>
-  </tr> 
-</table>  
+    </tr>   
+</table>    
 
 
 <script type="text/javascript">
@@ -37,7 +37,7 @@
                     obj.href = obj.href+tr;
         }
 
-        function SetTargetResource()
+        function SetTargetResource(elementID)
         {         
                     var tr = "#target_resource#";
                     if (getUrlVars()["TargetResource"])
@@ -45,10 +45,13 @@
                                 tr = getUrlVars()["TargetResource"];
                     }
 
-                    var cust = document.getElementById("cust");
-                    addTargetResource(cust, tr);
+                    var element = document.getElementById(elementID);
+                    addTargetResource(element, tr);
         }
         window.onload = SetTargetResource;
+
+        window.onload = SetTR("idaptive");
+        window.onload = SetTR("azure");
 </script>
 </body>
 </html>
