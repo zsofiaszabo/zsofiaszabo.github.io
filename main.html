@@ -7,7 +7,7 @@
 </table>
 <table width="1000" align="center">
         <td align = "center">           
-            <a id="azure" href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
+            <a id="okta" href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk1f9zieKMUBu3Cc5d6&TargetResource=">
             Click me for Okta Login!
             </a>
         </td>
@@ -21,35 +21,40 @@
     </tr>   
 </table>    
 
-
 <script type="text/javascript">
-        function getUrlVars() {
-                    var vars = {};
-                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
-                    function(m,key,value) {
-                     vars[key] = value;
-                    });
-                    return vars;
-        }
+			function getUrlVars() {
+				var vars = {};
+				var parts = window.location.href.replace(
+					/[?&]+([^=&]+)=([^&]*)/gi,
+					function(m,key,value) {
+						vars[key] = value;
+					}
+				);
+				return vars;
+			}
 
-        function addTargetResource(obj,tr)
-        {
-                    obj.href = obj.href+tr;
-        }
 
-        function SetTargetResource(elementID)
-        {         
-                    var tr = "#target_resource#";
-                    if (getUrlVars()["TargetResource"])
-                    {
-                                tr = getUrlVars()["TargetResource"];
-                    }
+			function addTR(obj,tr) {
+				obj.href = obj.href+tr;
+			}
 
-                    var element = document.getElementById(elementID);
-                    addTargetResource(element, tr);
-        }
-        window.onload = SetTargetResource("idaptive");
-        window.onload = SetTargetResource("azure");
+
+			function SetTR(elementID) {
+				var tr = "#target_resource#";
+
+				if (getUrlVars()["TargetResource"]) {
+					tr = getUrlVars()["TargetResource"];
+				}
+
+				var element = document.getElementById(elementID);
+				addTR(element, tr);
+			}
+
+			// Must give each <a> an id
+			// Each link must be given the TargetResource value
+			window.onload = SetTR("okta");
+			window.onload = SetTR("idaptive");
+		
 </script>
 </body>
 </html>
